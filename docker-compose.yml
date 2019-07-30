@@ -9,7 +9,7 @@ services:
   command: "elasticsearch -Des.cluster.name='graylog'"
 
  graylog:
-  image: graylog2/server:2.1.1-1
+  image: "graylog/graylog:3.0.2"
   environment:
    GRAYLOG_PASSWORD_SECRET: somepasswordpepper
    GRAYLOG_ROOT_PASSWORD_SHA2: 8c6976e5b5410415bde908bd4dee15dfb1
@@ -18,5 +18,5 @@ services:
    - mongodb:mongo
    - elasticsearch:elasticsearch
   ports:
-   - "9000:9000"
+#   - "9000:9000"
    - "12201:12201/udp"
